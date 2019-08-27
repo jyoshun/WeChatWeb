@@ -1,0 +1,274 @@
+.tab {
+  height: 88rpx;
+  line-height: 84rpx;
+  background: #fff;
+}
+
+.tab-item {
+  float: left;
+  width: 33.333333%;
+  height: 86rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+
+.tab-item-selected {
+  border-bottom: 4rpx solid #31c27c;
+  color: #31c27c;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+.channel {
+  margin-top: 20rpx;
+}
+
+.channel-title {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 44rpx;
+}
+
+.radio-list {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.radio-item {
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.radio-img-box {
+  width: 100%;
+  height: 50%;
+}
+
+.radio-img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.radio-text {
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-view {
+  padding: 20rpx;
+  background: #f7f7f7;
+}
+
+.top-item {
+  display: -webkit-box;
+  height: 200rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+  background: #fff;
+}
+
+.top-item-img {
+  display: block;
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.top-item-info {
+  margin: 0 10rpx 0 20rpx;
+  flex-direction: column;
+}
+
+.top-item-list {
+  white-space: nowrap;
+}
+
+.top-icon {
+  margin-top: 16rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.top-item-text {
+  margin-bottom: 10rpx;
+  font-size: 40rpx;
+}
+
+.search-bar {
+  padding: 20rpx;
+  background: #f7f7f7;
+}
+
+.search-input-warp {
+  position: relative;
+  padding: 16rpx 24rpx 16rpx 70rpx;
+  background: #fff;
+}
+
+.search-input-icon {
+  content: '';
+  position: absolute;
+  top: 18rpx;
+  left: 20rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+  background-repeat: no-repeat;
+  background-size: 40rpx;
+}
+
+.search-input {
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.search-input-placeholder {
+  color: #ddd;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.search-cancel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  font-size: 32rpx;
+  height: 90rpx;
+  width: 140rpx;
+  text-align: center;
+  line-height: 90rpx;
+  z-index: 50;
+  background: #f7f7f7;
+}
+
+.quick-search {
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.quick-search-title {
+  font-size: 28rpx;
+}
+
+.quick-search-bd {
+  position: relative;
+  margin-top: 20rpx;
+}
+
+.quick-search-item {
+  float: left;
+  margin: 0 20rpx 20rpx 0;
+  padding: 10rpx 20rpx;
+  border: 2rpx solid rgba(0,0,0,0.6);
+  border-radius: 30rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.quick-search-item-red {
+  float: left;
+  margin: 0 20rpx 20rpx 0;
+  padding: 10rpx 20rpx;
+  border: 2rpx solid #fc4524;
+  border-radius: 30rpx;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #fc4524;
+}
+
+.search-hi-item {
+  height: 88rpx;
+  border-bottom: 2rpx solid #ededed;
+  line-height: 88rpx;
+}
+
+.hi-icon {
+  display: inline-block;
+  position: absolute;
+  left: 20rpx;
+  width: 88rpx;
+  height: 88rpx;
+  background-size: 40rpx;
+}
+
+.hi-text {
+  display: block;
+  position: absolute;
+  left: 108rpx;
+  right: 108rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+
+.hi-close {
+  width: 88rpx;
+  height: 88rpx;
+  position: absolute;
+  right: 20rpx;
+}
+
+.clear-search {
+  font-size: 24rpx;
+  text-align: center;
+  color: #47c88a;
+  line-height: 88rpx;
+}
+
+.ssong-list {
+  background: #fff;
+}
+
+.ssong-item {
+  position: relative;
+  height: 88rpx;
+  border-bottom: 2rpx solid #ededed;
+}
+
+.ss-icon {
+  position: absolute;
+  left: 20rpx;
+  top: 14rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.ss-text {
+  position: absolute;
+  left: 108rpx;
+  right: 20rpx;
+  padding: 10rpx 0;
+}
+
+.ss-title {
+  font-size: 32rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ss-sub-title {
+  display: block;
+  padding-top: 4rpx;
+  font-size: 24rpx;
+  color: #999;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

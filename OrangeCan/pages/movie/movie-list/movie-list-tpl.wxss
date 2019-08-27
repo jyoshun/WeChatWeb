@@ -1,0 +1,41 @@
+/* movie-list-tpl样式 */
+@import "../single-movie/movie-tpl.wxss";
+
+.movie-list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.inner-container {
+  margin: 0 auto 20rpx;
+}
+
+.movie-head {
+  padding: 30rpx 20rpx 22rpx;
+}
+
+.slogan {
+  font-size: 24rpx;
+}
+
+.more {
+  float: right;
+}
+
+.more-text {
+  margin-right: 10rpx;
+  vertical-align: middle;
+  color: #4a6141;
+}
+
+.more-img {
+  width: 9rpx;
+  height: 16rpx;
+  vertical-align: middle;
+}
+
+.movies-container {
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,67 @@
+<!-- 设置页面的骨架 -->
+<view class="container">
+  <view class="category-item personal-info">
+    <view class="user-avatar">
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class="user-name">
+      <view class="user-nickname">
+        <open-data type="userNickName" lang="zh_CN"></open-data>
+      </view>
+      <view class="user-location">
+        <open-data type="userCity" lang="zh_CN"></open-data>
+      </view>
+    </view>
+  </view>
+  <!-- 缓存面板 -->
+  <view class="category-item">
+    <block wx:for="{{cache}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"/>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 设备面板 -->
+  <view class="category-item">
+    <block wx:for="{{device}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"/>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- API面板 -->
+  <view class="category-item">
+    <block wx:for="{{api}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"/>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+  <!-- 其他杂项面板 -->
+  <view class="category-item">
+    <block wx:for="{{others}}">
+      <view class="detail-item" catchtap="{{item.tap}}">
+        <image src="{{item.iconurl}}"/>
+        <text>{{item.title}}</text>
+        <view class="detail-item-btn"></view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 罗盘modal组件，modal组件已在130400版本中移除 -->
+  <modal title="指南针" confirm-text="确定" no-cancel hidden="{{compassHidden}}" bindconfirm="hideCompass" confirm-color="#1F4BA5">
+    当前方向：偏北{{compassVal}}
+  </modal>
+
+  <!-- 摇一摇计数面板 -->
+  <modal title="摇一摇" confirm-text="确定" no-cancel hidden="{{shakeInfo.gravityModalHidden}}" bindconfirm="gravityModalConfirm" confirm-color="#1F4BA5">
+    当前摇一摇次数：{{shakeInfo.num}}
+  </modal>
+
+</view>

@@ -1,0 +1,89 @@
+<!-- 显示评论数据的wxml代码 -->
+<view class="comment-detail-box">
+  <view class="comment-main-box">
+    <view class="comment-title">评论.........（共{{comments.length}}条）</view>
+    <block wx:for="{{comments}}" wx:for-item="item" wx:for-index="idx">
+      <view class="comment-item">
+        <view class="comment-item-header">
+          <view class="left-img">
+            <image src="{{item.avatar}}"/>
+          </view>
+          <view class="right-user">
+            <text class="user-name">{{item.username}}</text>
+          </view>
+        </view>
+        <view class="comment-body">
+          <view class="comment-txt" wx:if="{{item.content.txt}}">
+            <text>{{item.content.txt}}</text>
+          </view>
+          <view class="comment-voice" wx:if="{{item.content.audio && item.content.audio.url}}">
+            <view data-url="{{item.content.audio.url}}" class="comment-voice-item" catchtap="playAudio">
+              <image src="/images/icon/wx_app_voice.png" class="voice-play"/>
+              <text>{{item.content.audio.timeLen}}</text>
+            </view>
+          </view>
+          <view class="comment-img" wx:if="{{item.content.img.length!=0}}">
+            <block wx:for="{{item.content.img}}" wx:for-item="img" wx:for-index="imgIdx">
+              <!-- 实现图片预览 -->
+              <image src="{{img}}" mode="aspectFill" catchtap="previewImg" data-comment-idx="{{idx}}" data-img-idx="{{imgIdx}}"/>
+            </block>
+          </view>
+        </view>
+        <view class="comment-time">{{item.create_time}}</view>
+      </view>
+    </block>
+  </view>
+  <!-- 评论框的骨架 -->
+  <view class="input-box">
+    <view class="send-msg-box">
+      <!-- 录音输入框 -->
+      <view hidden="{{useKeyboardFlag}}" class="input-item">
+        <!-- useKeyboardFlag变量由catchtap="switchInputType"这个事件控制 -->
+        <image src="/images/icon/wx_app_keyboard.png" class="comment-icon keyboard-icon" catchtap="switchInputType"/>
+        <!-- catchtouchstart="recordStart"和catchtouchend="recordEnd"将开启录音和结束录音 -->
+        <input class="input speak-input {{recodingClass}}" value="按住 说话" disabled="disabled" catchtouchstart="recordStart" catchtouchend="recordEnd"/>
+      </view>
+      <!-- 键盘输入框 -->
+      <view hidden="{{!useKeyboardFlag}}" class="input-item">
+        <!-- useKeyboardFlag变量由catchtap="switchInputType"这个事件控制 -->
+        <image class="comment-icon speak-icon" src="/images/icon/wx_app_speak.png" catchtap="switchInputType"/>
+        <!-- <input class="input keyboard-input">实现文字内容的录入 -->
+        <!-- bindconfirm="submitComment"可以在真机上响应键盘的"完成"点击事件，同时也可以在模拟器中响应键盘的"回车"敲击事件 -->
+        <input class="input keyboard-input" value="{{keyboardInputValue}}" bindconfirm="submitComment" bindinput="bindCommentInput" placeholder="说点什么吧......"/>
+      </view>
+      <!-- catchtap="sendMoreMsg"将实现向内容中添加图片和拍照选择框的功能 -->
+      <image class="comment-icon add-icon" src="/images/icon/wx_app_add.png" catchtap="sendMoreMsg"/>
+      <!-- catchtap="submitComment"将实现评论内容的最终发送功能 -->
+      <view class="submit-btn" catchtap="submitComment">发送</view>
+    </view>
+    <view class="send-more-box" hidden="{{!sendMoreMsgFlag}}">
+      <!-- 选择图片和拍照的按钮 -->
+      <view class="send-more-btns-main">
+        <view class="more-btn-item" catchtap="chooseImage" data-category="album">
+          <view class="more-btn-main">
+            <image src="/images/icon/wx_app_upload_image.png"/>
+          </view>
+          <text>照片</text>
+        </view>
+        <view class="more-btn-item" catchtap="chooseImage" data-category="camera">
+          <view class="more-btn-main">
+            <image src="/images/icon/wx_app_camera.png"/>
+          </view>
+          <text>拍照</text>
+        </view>
+      </view>
+      <!-- 显示选择的图片 -->
+      <view class="send-more-result-main" hidden="{{chooseFiles.length==0}}">
+        <block wx:for="{{chooseFiles}}" wx:for-index="idx">
+          <!-- 如果删除其中一个，就对其添加deleting样式 -->
+          <view class="file-box {{deleteIndex==idx?'deleting':''}}">
+            <view class="img-box">
+              <image src="{{item}}" mode="aspectFill"/>
+              <icon class="remove-icon" type="cancel" size="23" color="#B2B2B2" catchtap="deleteImage" data-idx="{{idx}}"/>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

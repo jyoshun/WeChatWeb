@@ -1,0 +1,41 @@
+.item-size {
+  width: 70px;
+  height: 70px;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.SlateGray {
+  background-color: SlateGray;
+}
+
+.GoldEnrod {
+  background-color: GoldEnrod;
+}
+
+.green {
+  background-color: green;
+}
+
+.scroll_view_H {
+  white-space: nowrap;
+}
+
+.scroll_view_V {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: inline-block;
+}

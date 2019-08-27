@@ -1,0 +1,24 @@
+<!-- 引用postItemTpl -->
+<import src="post-item/post-item-tpl.wxml"/>
+
+<view>
+  <swiper catchtap="onSwiperTap" vertical="{{false}}" indicator-dots="true" autoplay="true" interval="5000" circular="true">
+    <swiper-item>
+      <image src="/images/post/post-1@text.jpg" data-post-id="3"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/post/post-2@text.jpg" data-post-id="4"/>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/post/post-3@text.jpg" data-post-id="5"/>
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{postList}}" wx:key="title" wx:for-item="item" wx:for-index="idx">
+    <!-- 注册跳转到文章详情页面事件：catchtap="onTapToDetail" -->
+    <!-- 绑定postId用来进行页面间传递参数 -->
+    <view catchtap="onTapToDetail" data-post-id="{{item.postId}}">
+      <!-- 引用并使用postItemTpl -->
+      <template is="postItemTpl" data="{{...item}}"/>
+    </view>
+  </block>
+</view>

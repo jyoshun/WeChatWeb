@@ -1,0 +1,2 @@
+/* 跟多电影页面的样式 */
+@import "../movie-grid/movie-grid-tpl.wxss";

@@ -1,0 +1,74 @@
+/* CSS模板：postItemTpl的样式 */
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5px;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+  margin: 20rpx 0 40rpx;
+  background-color: #fff;
+}
+
+.post-author-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rpx 0 20rpx 10px;
+}
+
+.post-author-date image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.post-author-date text {
+  margin-left: 20px;
+}
+
+.post-image {
+  width: 100%;
+  height: 340rpx;
+  margin-bottom: 15px;
+}
+
+.post-date {
+  margin-bottom: 10px;
+  font-size: 25rpx;
+}
+
+.post-title {
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.post-content {
+  margin-bottom: 20rpx;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #666;
+  letter-spacing: 2rpx;
+  line-height: 40rpx;
+}
+
+.post-like {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10px;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.post-like image {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.post-like text {
+  margin-right: 20px;
+}

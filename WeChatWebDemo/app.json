@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "微信小程序Demo",
+    "navigationStyle": "default",
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "backgroundColorTop": "#ffffff",
+    "backgroundColorBottom": "#ffffff",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#5588aa",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志"
+      }
+    ],
+    "position": "bottom"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 60000,
+    "uploadFile": 60000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

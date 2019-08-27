@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/toplist/toplist",
+    "pages/cdinfo/cdinfo",
+    "pages/play/play"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#6c6",
+    "navigationBarTitleText": "My Mucis",
+    "navigationBarTextStyle":"white"
+  }
+}

@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.head-image {
+  width: 750rpx;
+  height: 460rpx;
+}
+
+.title {
+  margin: 30rpx;
+  font-size: 20px;
+  color: #4b556c;
+  letter-spacing: 2px;
+}
+
+.author-date {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  font-size: 13px;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatar {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.author {
+  margin-left: 20rpx;
+  font-weight: 300;
+  color: #666;
+}
+
+.date {
+  margin-right: 38rpx;
+  color: #919191;
+}
+
+.detail {
+  margin: 40rpx 22rpx 0;
+  font-size: 14px;
+  color: #666;
+  letter-spacing: 1px;
+  line-height: 44rpx;
+}
+
+/* 3个功能按钮的样式 */
+
+.tool {
+  margin: 20rpx 28rpx 20rpx 0;
+  height: 64rpx;
+  text-align: center;
+  line-height: 64rpx;
+}
+
+.tool-item {
+  display: inline-block;
+  margin-right: 30rpx;
+  vertical-align: top;
+}
+
+.tool-item image {
+  margin-right: 10rpx;
+  width: 30rpx;
+  height: 30rpx;
+  vertical-align: -3px;
+}
+
+.comment image {
+  transform: scale(0.85);
+}
+
+/* 音乐播放的CSS代码 */
+
+.music {
+  position: absolute;
+  top: 180rpx;
+  left: 50%;
+  width: 110rpx;
+  height: 110rpx;
+  margin-left: -51rpx;
+  opacity: 0.9;
+}

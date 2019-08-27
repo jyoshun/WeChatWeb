@@ -1,0 +1,282 @@
+.comment-detail-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow-y: hidden;
+}
+
+.comment-main-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 100rpx;
+  right: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comment-item {
+  margin: 20rpx 0 20rpx 24rpx;
+  border-bottom: 1rpx solid #f2e7e1;
+  padding: 24rpx 24rpx 24rpx 0;
+}
+
+.comment-item:last-child {
+  border-bottom: none;
+}
+
+.comment-title {
+  margin-left: 24rpx;
+  border-bottom: 1px solid #ccc;
+  padding: 8rpx 0;
+  height: 60rpx;
+  font-size: 28rpx;
+  font-family: Microsoft YaHei;
+  color: #212121;
+  line-height: 60rpx;
+}
+
+.comment-item-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment-item-header .left-img image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.comment-item-header .right-user {
+  margin-left: 30rpx;
+  line-height: 80rpx;
+}
+
+.comment-item-header .right-user text {
+  font-size: 26rpx;
+  color: #212121;
+}
+
+.comment-body {
+  padding: 10rpx 0;
+  font-size: 26rpx;
+  color: #666;
+  line-height: 26rpx;
+}
+
+.comment-txt text {
+  line-height: 50rpx;
+}
+
+.comment-img {
+  margin: 10rpx 0;
+}
+
+.comment-img image {
+  width: 220rpx;
+  max-width: 32%;
+  height: 220rpx;
+  margin-right: 10rpx;
+}
+
+.comment-voice-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200rpx;
+  height: 64rpx;
+  border: 1px solid #ccc;
+  border-radius: 6rpx;
+  background-color: #fff;
+}
+
+.comment-voice-item .voice-play {
+  width: 64rpx;
+  height: 64rpx;
+}
+
+.comment-voice-item text {
+  margin-left: 60rpx;
+  font-size: 32rpx;
+  color: #212121;
+}
+
+.comment-time {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+/* 评论框的样式 */
+
+.input-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  min-height: 100rpx;
+  border-top: 1rpx solid #d5d5d5;
+  background-color: #eae8e8;
+}
+
+.input-box .send-msg-box {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 20rpx 0;
+}
+
+.input-box .send-more-box {
+  margin: 20rpx 35rpx 35rpx 35rpx;
+}
+
+.input-box .input-item {
+  position: relative;
+  margin: 0 5rpx;
+  flex: 1;
+  width: 0%;
+}
+
+.input-box .input-item .comment-icon {
+  position: absolute;
+  top: 6rpx;
+  left: 5rpx;
+}
+
+.input-box .input-item .input {
+  margin: 5rpx 0 5rpx 75rpx;
+  border: 1rpx solid #d5d5d5;
+  border-radius: 3px;
+  padding: 0 2%;
+  background-color: #fff;
+  font-size: 24rpx;
+  color: #838383;
+  line-height: 65rpx;
+}
+
+.input-box .input-item .keyboard-input {
+  width: auto;
+  max-height: 500rpx;
+  height: 65rpx;
+  overflow: auto;
+  word-break: break-all;
+}
+
+.input-box .input-item .speak-input {
+  height: 65rpx;
+  text-align: center;
+  color: #212121;
+}
+
+.input-box .input-item .recoding {
+  background-color: #ccc;
+}
+
+.input-box .input-item .comment-icon.speak-icon {
+  width: 62rpx;
+  height: 62rpx;
+}
+
+.input-box .input-item .comment-icon.keyboard-icon {
+  width: 60rpx;
+  height: 60rpx;
+  left: 6rpx;
+}
+
+.input-box .add-icon {
+  width: 65rpx;
+  height: 65rpx;
+  margin: 0 5rpx;
+  margin-top: 2px;
+  transform: scale(0.9);
+}
+
+.input-box .submit-btn {
+  width: 120rpx;
+  height: 60rpx;
+  margin-top: 5rpx;
+  margin-right: 8rpx;
+  border-radius: 5rpx;
+  background-color: #4a6141;
+  font-size: 24rpx;
+  font-family: Microsoft YaHei;
+  color: #fff;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.send-more-box .more-btn-item {
+  display: inline-block;
+  width: 110rpx;
+  height: 145rpx;
+  margin-right: 35rpx;
+  text-align: center;
+}
+
+.more-btn-main {
+  width: 100%;
+  height: 60rpx;
+  margin: 0 auto;
+  padding: 25rpx 0;
+  border: 1px solid #d5d5d5;
+  border-radius: 10rpx;
+  background-color: #fbfbfc;
+  text-align: center;
+}
+
+.more-btn-main image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.send-more-box .more-btn-item .btn-txt {
+  margin: 10rpx 0;
+  font-size: 24rpx;
+  color: #888;
+}
+
+.send-more-result-main {
+  margin-top: 30rpx;
+}
+
+.send-more-result-main .file-box {
+  display: inline-block;
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: 14rpx;
+}
+
+.send-more-result-main .file-box.deleting {
+  animation: deleting 0.5s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes deleting {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+.send-more-result-main image {
+  width: 100%;
+  height: 100%;
+}
+
+.send-more-result-main .remove-icon {
+  position: absolute;
+  right: 5rpx;
+  top: 5rpx;
+}
+
+.send-more-result-main .file-box .img-box {
+  width: 100%;
+  height: 100%;
+}
